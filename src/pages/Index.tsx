@@ -41,13 +41,12 @@ const Index = () => {
       return;
     }
     setLoading(true);
-    // Simulate slight delay for effect
     setTimeout(() => {
       setCardData({
         username: trimmed,
         role: randomRole(),
         reputation: randomReputation(),
-        avatarUrl: `https://unavatar.io/twitter/${trimmed}`,
+        avatarUrl: `/api/avatar?username=${trimmed}`,
       });
       setLoading(false);
     }, 600);
@@ -161,7 +160,7 @@ const Index = () => {
         <div className="text-center mt-16 sm:mt-24">
           <p className="text-muted-foreground/40 text-xs">
             Built with ♥ by{" "}
-            <a
+            
               href="https://x.com/ifwayodeji"
               target="_blank"
               rel="noopener noreferrer"
