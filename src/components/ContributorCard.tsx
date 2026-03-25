@@ -56,10 +56,9 @@ const ContributorCard = forwardRef<HTMLDivElement, ContributorCardProps>(
               <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-[2px] bg-gradient-to-br from-primary via-orange-400 to-red-500">
                 <div className="w-full h-full rounded-full overflow-hidden bg-background p-[2px]">
                   <img
-                    src={`https://wsrv.nl/?url=${encodeURIComponent(avatarUrl)}&w=200&h=200&fit=cover`}
+                    src={avatarUrl}
                     alt={username}
                     className="w-full h-full rounded-full object-cover"
-                    crossOrigin="anonymous"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = `https://api.dicebear.com/7.x/identicon/svg?seed=${username}`;
                     }}
