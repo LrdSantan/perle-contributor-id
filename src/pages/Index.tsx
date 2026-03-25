@@ -72,14 +72,13 @@ const Index = () => {
   const handleShare = useCallback(() => {
     if (!cardData) return;
     const text = encodeURIComponent(
-      `I just generated my Perle AI Contributor Card! 🚀\n\n@${cardData.username} | ${cardData.role}\nNetwork Reputation: ${cardData.reputation}\n\nGet yours at perle.ai\n\nBuilt by @ifwayodeji`
+      `I just generated my Perle AI Contributor Card!\n\n@${cardData.username} | ${cardData.role}\nNetwork Reputation: ${cardData.reputation}\n\nGet yours at perle.ai\n\nBuilt by @ifwayodeji`
     );
     window.open(`https://twitter.com/intent/tweet?text=${text}`, "_blank");
   }, [cardData]);
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Background effects */}
       <div className="fixed inset-0 grid-pattern opacity-20 pointer-events-none" />
       <div
         className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] pointer-events-none"
@@ -89,7 +88,6 @@ const Index = () => {
       />
 
       <div className="relative z-10 container mx-auto px-4 py-8 sm:py-16 max-w-5xl">
-        {/* Header */}
         <div className="text-center mb-10 sm:mb-16">
           <h1 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 tracking-tight">
             Perle AI <span className="text-primary neon-text">Contributor</span> Card
@@ -99,7 +97,6 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Input section */}
         <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-10 sm:mb-16">
           <div className="relative flex-1">
             <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground text-sm">@</span>
@@ -127,14 +124,11 @@ const Index = () => {
           </Button>
         </div>
 
-        {/* Card preview */}
         {cardData && (
           <div className="flex flex-col items-center gap-8 animate-fade-in">
             <div className="animate-float">
               <ContributorCard ref={cardRef} {...cardData} />
             </div>
-
-            {/* Action buttons */}
             <div className="flex flex-wrap justify-center gap-3">
               <Button
                 onClick={handleDownload}
@@ -156,7 +150,6 @@ const Index = () => {
           </div>
         )}
 
-        {/* Footer credit */}
         <div className="text-center mt-16 sm:mt-24">
           <p className="text-muted-foreground/40 text-xs">
             Built with ♥ by{" "}
