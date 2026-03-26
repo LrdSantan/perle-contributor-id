@@ -152,7 +152,7 @@ const Index = () => {
 
         <div className="text-center mt-16 sm:mt-24">
           <p className="text-muted-foreground/40 text-xs">
-            Built with &hearts; by{" "}
+            Built by{" "}
             
               href="https://x.com/ifwayodeji"
               target="_blank"
