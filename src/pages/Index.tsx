@@ -46,7 +46,7 @@ const Index = () => {
         username: trimmed,
         role: randomRole(),
         reputation: randomReputation(),
-        avatarUrl: `/api/avatar?username=${trimmed}`,
+       avatarUrl: `https://api.dicebear.com/7.x/fun-emoji/svg?seed=${trimmed}`,
       });
       setLoading(false);
     }, 600);
