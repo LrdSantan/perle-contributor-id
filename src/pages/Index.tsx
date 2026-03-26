@@ -151,17 +151,17 @@ const Index = () => {
         )}
 
         <div className="text-center mt-16 sm:mt-24">
-          <p className="text-muted-foreground/40 text-xs">
-            Built by{" "}
-            
-              href="https://x.com/ifwayodeji"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary/60 hover:text-primary transition-colors"
-            >
-              @ifwayodeji
-            </a>
-          </p>
+      <p className="text-muted-foreground/40 text-xs">
+  Built by{" "}
+  <a
+    href="https://x.com/ifwayodeji"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-primary/60 hover:text-primary transition-colors"
+  >
+    @ifwayodeji
+  </a>
+</p>
         </div>
       </div>
     </div>
